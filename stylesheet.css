@@ -1,0 +1,92 @@
+body{
+    /* display:flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;  */    /* I removed this from a flex box to grid for center, to allow for smoother closing when
+    you make the screen smaller, the elements dont start overlapping over each other, with this it just dissapears slowly*/
+    display:grid; 
+    place-items:center;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image:url(./images/bg-pattern-top.svg),url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-color:  hsl(185, 75%, 39%);
+    overflow: hidden;
+    height:100vh;
+    line-height: 25px;
+    background-position: top -520px left -350px, bottom -520px right -315px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    background-color:#ffff;
+    border-radius: 20px;
+    width:320px;
+    height:380px;
+    overflow: hidden;
+    /* margin:auto; */
+}
+
+
+.card-top{
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    height: 37%;
+    /* text-align: center; */
+} 
+
+
+.profile-image{
+    border-radius: 50px;
+    display: block;
+    margin: auto; 
+    border: 5px solid #ffffff;
+    margin-top: 86px;
+}
+
+.card-middle{
+    margin-top: 70px;
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.light{
+    color:#909090;
+}
+
+.small-font{
+    font-size: 12px;
+}
+
+ .line{
+    width:100%;
+    opacity:30%;
+    /* You have to set the width of your hr element if it is within a flex box and the flex direction is set to column */
+} 
+
+.card-bottom{
+     display: flex;
+     justify-content: space-evenly;
+      width: 100%;  /* define the width, otherwise the space-evenly propperty value will not work as it is already 
+     in a flexbox that is forcing it to be in the center; */
+     text-align: center;
+}
+
+.attribution{
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 481px){
+
+    body{
+        background-position: top -525px left -750px, bottom -520px right -775px;
+}
+}
